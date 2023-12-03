@@ -1,3 +1,5 @@
+/* Reset or normalize CSS goes here if needed */
+
 body {
   font-family: 'Noto Serif Display', serif;
   background-color: #fff;
@@ -33,19 +35,23 @@ button {
   cursor: pointer;
 }
 
+.button--comment,
+.button--box {
+  font-weight: 700;
+}
+
 .button--comment {
   color: #143774;
-  font-weight: 700;
 }
 
 .button--box {
   color: #171717;
-  font-weight: 700;
   font-size: 1rem;
   margin-top: 2em;
 }
 
-.container {
+.container,
+.container--detail {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -75,10 +81,18 @@ p {
 }
 
 /* Notice */
-.notice {
+.notice,
+.nav .search__btn {
   background-color: #171717;
-  color: #ffff;
-  text-align: center;
+}
+
+.notice {
+  color: #fff;
+}
+
+.nav .search__btn {
+  color: #171717;
+  background-color: #fff;
 }
 
 /* Input */
@@ -188,28 +202,6 @@ input[type="submit"]:focus {
   color: #fff;
   font-size: 3rem;
 }
-
-.nav .search__btn {
-  cursor: pointer;
-  padding: .75em 1em;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  color: #171717;
-  background-color: #fff;
-  border: 1px solid #171717;
-  transition-duration: .2s;
-  margin: 0;
-}
-
-.nav .search__btn:hover,
-.nav .search__btn:focus {
-  background-color: #7e7e7e;
-  color: #fff;
-}
-
 
 /* Subscribe */
 .subscribe {
@@ -342,7 +334,7 @@ input[type="submit"]:focus {
 
 /* Mobile first*/
 @media (min-width: 320px) {
-
+  /* Add mobile-specific styles if needed */
 }
 
 @media (min-width: 421px) {
