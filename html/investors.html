@@ -14,26 +14,24 @@
     />
 
     <link rel="icon" href="icon.png" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <script src="./script/script.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../script/script.js" type="text/javascript" defer></script>
     <meta name="description" content="Team 09 project" />
   </head>
 
   <body>
     <header class="header">
       <a class="header__logo" href="index.html">
-        <img class="header__logo__img" src="./img/logo.png" alt="Logo" />
+        <img class="header__logo__img" src="../img/logo.png" alt="Logo" />
       </a>
 
       <nav class="nav" id="myNav">
         <ul class="nav__inner">
           <li>
-            <a class="menu__link" href="./html/about-us.html">About</a>
+            <a class="menu__link" href="#">About</a>
             <ul class="menu__dropdown">
-              <li>
-                <a class="menu__sublink" href="#">Contact</a>
-              </li>
+              <li><a class="menu__sublink" href="#">Contact</a></li>
               <li><a class="menu__sublink" href="#">Working Hours</a></li>
               <li><a class="menu__sublink" href="#">Careers</a></li>
               <li><a class="menu__sublink" href="#">About Us</a></li>
@@ -144,25 +142,71 @@
     </header>
 
     <main>
-      <section class="homepage">
-        <h1 class="homepage__title">Come and stay</h1>
-      </section>
+      <section class="section">
+        <h1 class="section__title">For investors</h1>
 
-      <section class="subscribe">
-        <div class="subscribe__title">
-          <h2>Subscribe to our newsletter</h2>
-          <p>to receive hand-picked articles, news, and more.</p>
-        </div>
-        <form class="subscribe__form">
+        <p class="section__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
+          et viverra justo commodo. Proin sodales pulvinar tempor.
+        </p>
+
+        <p class="section__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
+          et viverra justo commodo. Proin sodales pulvinar te+mpor. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+          laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo
+          commodo. Proin sodales pulvinar tempor.
+        </p>
+
+        <h2 class="apartment__subtitle">
+          Please fill in contact form and we will contact you soon.
+        </h2>
+
+        <form class="contact__form" action="">
+          <label for="fname">First Name</label>
           <input
-            class="subscribe__email"
             type="text"
-            placeholder="johndoe@email.com"
-            size="27"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
             required
           />
-          <input class="subscribe__btn" type="submit" value="Subscribe" />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+            required
+          />
+
+          <label for="mail">Email</label>
+          <input
+            type="text"
+            id="mail"
+            name="mail"
+            placeholder="Your e-mail"
+            required
+          />
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
         </form>
+
+        <div class="contact__results">
+          <div>Thank you!</div>
+          <div>We will contact you soon.</div>
+        </div>
       </section>
     </main>
 
