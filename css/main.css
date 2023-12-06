@@ -75,8 +75,7 @@ b {
   width: 12px;
   height: 12px;
   margin-left: 12px;
-  background: no-repeat center/24px
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 0 48 48' width='48'%3E%3Cpath d='M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z' fill='%23fff'/%3E%3Cpath d='M0-.75h48v48h-48z' fill='none'/%3E%3C/svg%3E");
+  background: no-repeat center/24px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 0 48 48' width='48'%3E%3Cpath d='M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z' fill='%23fff'/%3E%3Cpath d='M0-.75h48v48h-48z' fill='none'/%3E%3C/svg%3E");
 }
 
 a.menu__sublink {
@@ -168,6 +167,7 @@ a.menu__sublink {
 
 /* Subscribe */
 .subscribe {
+  font-size: 1rem;
   padding: 4em 0;
   background-color: #f3f3f3;
 }
@@ -187,6 +187,47 @@ a.menu__sublink {
   margin-top: 2em;
 }
 
+/* Selection of category */
+.category__section {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2em;
+}
+
+.category__section__title {
+  text-align: center;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.category__section__title h2 {
+  margin-bottom: 1em;
+  display: none;
+}
+
+.category__section__category {
+  align-items: center;
+  align-content: center;
+}
+
+.confirm__btn{
+  border-radius: 4px;
+  color: #fff;
+  background: rgba(30, 152, 215, 1);
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  border: 0;
+}
+
+.subscribe__success{
+  display: none;
+  text-align: center;
+}
+
 .homepage {
   display: flex;
   align-items: center;
@@ -203,8 +244,9 @@ a.menu__sublink {
   background: #fff;
 }
 
+
 /* 404 not found*/
-.notfound__info{
+.notfound__info {
   text-align: center;
   background-color: #fff;
   margin: 0;
@@ -541,8 +583,7 @@ span.icon {
   }
 
   .nav a.menu__link::after {
-    background: no-repeat center/24px
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 0 48 48' width='48'%3E%3Cpath d='M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z' fill='currentColor'/%3E%3Cpath d='M0-.75h48v48h-48z' fill='none'/%3E%3C/svg%3E");
+    background: no-repeat center/24px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 0 48 48' width='48'%3E%3Cpath d='M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z' fill='currentColor'/%3E%3Cpath d='M0-.75h48v48h-48z' fill='none'/%3E%3C/svg%3E");
   }
 
   .nav ul:not(.menu__dropdown) {

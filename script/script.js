@@ -42,14 +42,15 @@ if (searchForm) {
 
 document.addEventListener('DOMContentLoaded', function () {
   var form = document.querySelector('.subscribe__form');
+  var categorySection = document.querySelector('.category__section');
+  var categorySectionHeader = document.querySelector('.category__section__title');
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     if (validateEmail()) {
-      alert('Your email added successfully!');
-      // Uncomment the line below if you want to submit the form programmatically
-      // form.submit();
+      categorySection.style.display = 'flex';
+      categorySectionHeader.style.display = 'block';
     }
   });
 
@@ -66,6 +67,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     return true;
   }
+
+  window.confirmSubscription = function () {
+    var selectedCategories = document.querySelectorAll('input[name="category__section__category"]:checked');
+    var subscribeSection = document.querySelector('.subscribe__input');
+    var subscribeSectionSuccessText = document.querySelector('.subscribe__success');
+
+    if (selectedCategories.length > 0) {
+      alert('Subscription confirmed! Email successfully added for selected categories.');
+      subscribeSection.style.display = 'none';
+      subscribeSectionSuccessText.style.display = 'block';
+    } else {
+      alert('Please select at least one category.');
+    }
+  };
 });
 
 
@@ -81,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   menuItems.forEach(function(item) {
-      var dropdown = item.nextElementSibling; 
+      var dropdown = item.nextElementSibling;
 
       // Click event listener for menu items
       item.addEventListener('click', function(e) {
@@ -98,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
       dropdownLinks.forEach(function(link) {
           link.addEventListener('click', function() {
               closeAllDropdowns();
-              item.classList.add('active'); 
+              item.classList.add('active');
           });
       });
   });
