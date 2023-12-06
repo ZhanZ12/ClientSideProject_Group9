@@ -203,6 +203,48 @@ a.menu__sublink {
   background: #fff;
 }
 
+/* 404 not found*/
+.notfound__info{
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notfound__title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  background: #fff;
+}
+
+.notfound__text {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px 15px;
+  background: #fff;
+}
+
+.notfound__button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 3rem;
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.notfound__button:hover {
+  background-color: #0056b3;
+}
+
 /* About */
 .section {
   max-width: 1200px;
