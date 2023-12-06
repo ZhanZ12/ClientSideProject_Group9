@@ -2,60 +2,168 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Page Not Found</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
-
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
-
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Noto+Serif+Display:wght@300;400;500;700&family=Nunito+Sans:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="../icon.png"/>
+  <link rel="stylesheet" href="../css/reset.css"/>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <script src="../script/script.js" type="text/javascript" defer></script>
+  <meta name="description" content="Team 09 project"/>
 </head>
 
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
+<header class="header">
+  <a class="header__logo" href="../index.html">
+    <img class="header__logo__img" src="../img/logo.png" alt="Logo" />
+  </a>
+
+  <nav class="nav" id="myNav">
+    <ul class="nav__inner">
+      <li>
+        <a class="menu__link" href="../html/about-us.html">About</a>
+        <ul class="menu__dropdown">
+          <li>
+            <a class="menu__sublink" href="#">Contact</a>
+          </li>
+          <li><a class="menu__sublink" href="#">Working Hours</a></li>
+          <li><a class="menu__sublink" href="#">Careers</a></li>
+          <li><a class="menu__sublink" href="#">About Us</a></li>
+          <li><a class="menu__sublink" href="#">Our Partners</a></li>
+          <li><a class="menu__sublink" href="#">For Investors</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a class="menu__link" href="#">Activities</a>
+        <ul class="menu__dropdown">
+          <li><a class="menu__sublink" href="#">Skiing</a></li>
+          <li><a class="menu__sublink" href="#">Sauna</a></li>
+          <li><a class="menu__sublink" href="#">Wine Tour</a></li>
+          <li><a class="menu__sublink" href="#">Sledding</a></li>
+          <li><a class="menu__sublink" href="#">Hiking</a></li>
+          <li><a class="menu__sublink" href="#">Night Show</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a class="menu__link" href="#">Accommodation</a>
+        <ul class="menu__dropdown">
+          <li><a class="menu__sublink" href="#">Hotels</a></li>
+          <li><a class="menu__sublink" href="#">Hostels</a></li>
+          <li><a class="menu__sublink" href="#">Apartments</a></li>
+          <li><a class="menu__sublink" href="#">Cottage</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="menu__link" href="#">Gastronomy</a>
+        <ul class="menu__dropdown">
+          <li><a class="menu__sublink" href="#">Restaurants</a></li>
+          <li><a class="menu__sublink" href="#">Cafes</a></li>
+          <li><a class="menu__sublink" href="#">Food Court</a></li>
+          <li><a class="menu__sublink" href="#">Pubs</a></li>
+          <li><a class="menu__sublink" href="#">Groceries</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a class="menu__link" href="#">Transportation</a>
+        <ul class="menu__dropdown">
+          <li><a class="menu__sublink" href="#">Bus</a></li>
+          <li><a class="menu__sublink" href="#">Ski Bus</a></li>
+          <li><a class="menu__sublink" href="#">Cycle Bus</a></li>
+          <li><a class="menu__sublink" href="#">Taxi</a></li>
+          <li><a class="menu__sublink" href="#">Parking</a></li>
+          <li><a class="menu__sublink" href="#">MHD</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="menu__link" href="#">Services</a>
+        <ul class="menu__dropdown">
+          <li><a class="menu__sublink" href="#">ATM</a></li>
+          <li><a class="menu__sublink" href="#">Post</a></li>
+          <li><a class="menu__sublink" href="#">Hospital</a></li>
+          <li><a class="menu__sublink" href="#">Shops</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <button class="nav__close" id="closeMenu">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        enable-background="new 0 0 128 128"
+        height="25px"
+        width="25px"
+        version="1.1"
+        viewBox="0 0 128 128"
+        xml:space="preserve"
+      >
+            <g>
+              <polygon
+                fill="#fff"
+                points="123.5429688,11.59375 116.4765625,4.5185547 64.0019531,56.9306641 11.5595703,4.4882813     4.4882813,11.5595703 56.9272461,63.9970703 4.4570313,116.4052734 11.5244141,123.4814453 63.9985352,71.0683594     116.4423828,123.5117188 123.5126953,116.4414063 71.0732422,64.0019531   "
+              />
+            </g>
+          </svg>
+    </button>
+  </nav>
+
+  <button class="header__toggle" id="openMenu">
+    <i class="header__toggle__icon">
+      <svg
+        fill="none"
+        width="32"
+        height="32"
+        viewBox="0 0 28 28"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 7C3 6.44771 3.44772 6 4 6H24C24.5523 6 25 6.44771 25 7C25 7.55229 24.5523 8 24 8H4C3.44772 8 3 7.55229 3 7Z"
+          fill="black"
+        />
+        <path
+          d="M3 14C3 13.4477 3.44772 13 4 13H24C24.5523 13 25 13.4477 25 14C25 14.5523 24.5523 15 24 15H4C3.44772 15 3 14.5523 3 14Z"
+          fill="black"
+        />
+        <path
+          d="M4 20C3.44772 20 3 20.4477 3 21C3 21.5523 3.44772 22 4 22H24C24.5523 22 25 21.5523 25 21C25 20.4477 24.5523 20 24 20H4Z"
+          fill="black"
+        />
+      </svg>
+    </i>
+  </button>
+</header>
+
+<main>
+  <section class="notfound__info">
+    <h1 class="notfound__title">Page Not Found</h1>
+    <br>
+    <p class="notfound__text">Sorry, but the page you were trying to view does not exist.</p>
+    <a href="../index.html" class="notfound__button">Go To Home Page</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p>TEAM 09 PROJECT © 2023, All rights reserved.</p>
+
+    <div class="footer__item">
+      <a href="../index.html">Home page</a>
+      <a href="./about-us.html">About us</a>
+      <a href="./careers.html">Careers</a>
+      <a href="./for-investors.html">For Investors</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 
 </html>
