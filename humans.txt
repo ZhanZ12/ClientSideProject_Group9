@@ -3,13 +3,15 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Pukha Volodymyr
+    Mussin Assyltas
+    Zhunussov Zhan
 
 # THANKS
 
-    <name>
+    Thanks to our professor Petr Benda
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    JavaScript
