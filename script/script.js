@@ -76,34 +76,40 @@ document.addEventListener('DOMContentLoaded', function() {
       menuItems.forEach(function(item) {
           var dropdown = item.nextElementSibling;
           dropdown.classList.remove('active');
+          item.classList.remove('active'); // Remove 'active' from menu__link
       });
   }
 
   menuItems.forEach(function(item) {
+      var dropdown = item.nextElementSibling; 
+
+      // Click event listener for menu items
       item.addEventListener('click', function(e) {
-          var dropdown = this.nextElementSibling;
-
-          closeAllDropdowns();
-
           dropdown.classList.toggle('active');
 
           if (dropdown.classList.contains('active')) {
               e.preventDefault();
+          } else {
+              item.classList.add('active');
           }
+      });
+
+      var dropdownLinks = dropdown.querySelectorAll('.menu__sublink');
+      dropdownLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+              closeAllDropdowns();
+              item.classList.add('active'); 
+          });
       });
   });
 
   document.addEventListener('click', function(e) {
-    var isMenuItemClick = Array.from(menuItems).some(function(item) {
-        return item.contains(e.target);
-    });
+      var isMenuItemClick = Array.from(menuItems).some(function(item) {
+          return item.contains(e.target);
+      });
 
-    if (!isMenuItemClick) {
-        closeAllDropdowns();
-
-        menuItems.forEach(function(item) {
-            item.classList.remove('active');
-        });
-    }
-});
+      if (!isMenuItemClick) {
+          closeAllDropdowns();
+      }
+  });
 });
