@@ -118,6 +118,11 @@ a.menu__sublink {
   display: block;
 }
 
+.menu__sublink:hover {
+  background-color: #555;
+  color: #fff;
+}
+
 .footer {
   background-color: #171717;
   color: #fff;
