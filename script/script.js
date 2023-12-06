@@ -40,6 +40,34 @@ if (searchForm) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.querySelector('.subscribe__form');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    if (validateEmail()) {
+      alert('Your email added successfully!');
+      // Uncomment the line below if you want to submit the form programmatically
+      // form.submit();
+    }
+  });
+
+  function validateEmail() {
+    var emailInput = document.getElementById('emailInput');
+    var email = emailInput.value.trim();
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
+
+    return true;
+  }
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
   var menuItems = document.querySelectorAll('.menu__link');
@@ -53,15 +81,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   menuItems.forEach(function(item) {
       item.addEventListener('click', function(e) {
-          var dropdown = this.nextElementSibling; // Assuming the dropdown is a sibling element
+          var dropdown = this.nextElementSibling;
 
-          // Close other open dropdowns
           closeAllDropdowns();
 
-          // Toggle the 'active' class on the dropdown to show/hide it
           dropdown.classList.toggle('active');
 
-          // Prevent the default link behavior if the dropdown is visible
           if (dropdown.classList.contains('active')) {
               e.preventDefault();
           }
@@ -76,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!isMenuItemClick) {
         closeAllDropdowns();
 
-        // Remove 'active' class from all menu__link elements
         menuItems.forEach(function(item) {
             item.classList.remove('active');
         });
