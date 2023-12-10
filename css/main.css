@@ -57,6 +57,14 @@ b {
   text-align: center;
   top: 150px;
   width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.menu__link__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav a {
@@ -69,13 +77,14 @@ b {
   transition: 0.3s;
 }
 
-.nav a.menu__link::after {
+.menu__link__wrapper .menu__link__button::after {
   content: "";
   display: inline-block;
   width: 12px;
   height: 12px;
   margin-left: 12px;
-  background: no-repeat center/24px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 0 48 48' width='48'%3E%3Cpath d='M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z' fill='%23fff'/%3E%3Cpath d='M0-.75h48v48h-48z' fill='none'/%3E%3C/svg%3E");
+  background: no-repeat center/24px
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 0 48 48' width='48'%3E%3Cpath d='M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z' fill='%23fff'/%3E%3Cpath d='M0-.75h48v48h-48z' fill='none'/%3E%3C/svg%3E");
 }
 
 a.menu__sublink {
@@ -114,7 +123,7 @@ a.menu__sublink {
   display: none;
 }
 
-.menu__link.active + .menu__dropdown {
+.menu__link__wrapper.active + .menu__dropdown {
   display: block;
 }
 
@@ -219,7 +228,7 @@ a.menu__sublink {
   align-content: center;
 }
 
-.confirm__btn{
+.confirm__btn {
   border-radius: 4px;
   color: #fff;
   background: rgba(30, 152, 215, 1);
@@ -228,7 +237,7 @@ a.menu__sublink {
   border: 0;
 }
 
-.subscribe__success{
+.subscribe__success {
   display: none;
   text-align: center;
 }
@@ -248,7 +257,6 @@ a.menu__sublink {
   padding: 10px 15px;
   background: #fff;
 }
-
 
 /* 404 not found*/
 .notfound__info {
@@ -344,7 +352,6 @@ a.menu__sublink {
 .about__list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  /* grid-template-columns: repeat(3, 1fr); */
   gap: 30px 20px;
 }
 
@@ -588,7 +595,22 @@ span.icon {
   }
 
   .nav a.menu__link::after {
-    background: no-repeat center/24px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 0 48 48' width='48'%3E%3Cpath d='M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z' fill='currentColor'/%3E%3Cpath d='M0-.75h48v48h-48z' fill='none'/%3E%3C/svg%3E");
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 12px;
+    background: no-repeat center/24px
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' viewBox='0 0 48 48' width='48'%3E%3Cpath d='M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z' fill='currentColor'/%3E%3Cpath d='M0-.75h48v48h-48z' fill='none'/%3E%3C/svg%3E");
+  }
+
+  .menu__link__wrapper .menu__link__button::after {
+    display: none;
+  }
+
+  .nav a.menu__link {
+    display: flex;
+    align-items: center;
   }
 
   .nav ul:not(.menu__dropdown) {
@@ -607,7 +629,9 @@ span.icon {
     position: static;
   }
 
+  .nav__inner li:hover .menu__dropdown,
   .menu__link.active + .menu__dropdown {
+    display: block;
     position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   }
