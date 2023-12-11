@@ -20,8 +20,6 @@ menuLinks.forEach((menuLink) => {
   });
 });
 
-
-
 const contactForm = document.querySelector(".contact__form");
 const searchForm = document.querySelector(".search");
 
@@ -95,4 +93,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
-
