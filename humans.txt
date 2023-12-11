@@ -6,6 +6,7 @@
     Pukha Volodymyr
     Mussin Assyltas
     Zhunussov Zhan
+    Beisenov Anuar
 
 # THANKS
 
