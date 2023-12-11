@@ -22,8 +22,8 @@ b {
 }
 
 .warning {
-  background-color: #333; 
-  color: #fff; 
+  background-color: #333;
+  color: #fff;
   padding: 10px;
   text-align: center;
 }
@@ -172,7 +172,7 @@ a.menu__sublink {
 .footer__item {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 1.5em;
 }
@@ -219,7 +219,7 @@ a.menu__sublink {
 }
 
 .footer__member img {
-  width: auto; 
+  width: auto;
   filter: brightness(70%);
 }
 .footer__member img:hover{
@@ -322,7 +322,7 @@ a.menu__sublink {
 }
 
 .notfound__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
   padding: 10px 15px;
@@ -383,15 +383,16 @@ a.menu__sublink {
 
 .about__item {
   display: flex;
+  width: 80%;
 }
 
 .about__item__img {
-  width: 120px;
-  height: 120px;
+  height: 100px;
 }
 
 .about__item__content {
-  padding-left: 1.5rem;
+  width: 60%;
+  padding-left: 0.7rem;
 }
 
 .about__item__title {
