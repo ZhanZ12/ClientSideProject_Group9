@@ -213,7 +213,6 @@ a.menu__sublink {
   align-content: center;
   justify-content: center;
 }
-
 .footer__member {
   text-align: center;
   padding: 0px 20px;
@@ -406,6 +405,8 @@ a.menu__sublink {
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 30px 20px;
 }
+
+
 
 /* Career */
 .careers__list {
